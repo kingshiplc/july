@@ -1,0 +1,11 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#alert-message {
+    z-index: 99;
+    position: absolute;
+    right: 2%;
+    top: 8%;
+}
+

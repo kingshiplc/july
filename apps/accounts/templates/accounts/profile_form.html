@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    {{ object.user.profile.first_name }} {{ object.user.profile.last_name }}
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="my-5 text-center border-bottom">
+        <p class="fs-1">{{ object.user.profile.first_name }} {{ object.user.profile.last_name }}</p>
+    </div>
+    <div class="d-flex justify-content-center">
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <form action=""
+                method="post">
+                {% csrf_token %}
+                {{form|crispy }}
+                <div class="d-grid col mx-auto">
+                    <button class="btn btn-sm btn-outline-primary mt-3"
+                        type="submit">Log in</button>
+                </div>
+            </form>
+        
+        </div>
+    </div>
+</div>
+    
+{% endblock content %}
+    
+    

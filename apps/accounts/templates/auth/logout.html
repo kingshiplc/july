@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Logged out
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="container my-5">
+    <div class="text-center border-bottom">
+        <p class="fs-4">Logged out</p>
+    </div>
+        <div class="text-center mt-5">
+            <a href="{% url 'accounts:login' %}">Login again?</a>
+        </div>
+</div>
+
+
+{% endblock content %}

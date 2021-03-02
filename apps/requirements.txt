@@ -1,0 +1,4 @@
+django
+autopep8
+django-crispy-forms
+six
